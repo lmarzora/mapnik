@@ -57,11 +57,7 @@ using json_value_base = mapnik::util::variant<value_null,
                                               mapnik::util::recursive_wrapper<json_object> >;
 struct json_value : json_value_base
 {
-#if __cpp_inheriting_constructors >= 200802
 
-    using json_value_base::json_value_base;
-
-#else
 
     json_value() = default;
 
@@ -69,7 +65,6 @@ struct json_value : json_value_base
     json_value(T && val)
         : json_value_base(std::forward<T>(val)) {}
 
-#endif
 };
 
 using uchar = std::uint32_t; // a unicode code point

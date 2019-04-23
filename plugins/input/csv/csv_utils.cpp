@@ -25,6 +25,7 @@
 #include <mapnik/geometry.hpp>
 #include <mapnik/geometry_correct.hpp>
 #include <mapnik/wkt/wkt_factory.hpp>
+#include <mapnik/wkt/wkt_grammar_impl.hpp>
 #include <mapnik/json/geometry_parser.hpp>
 #include <mapnik/util/conversions.hpp>
 #include <mapnik/util/trim.hpp>

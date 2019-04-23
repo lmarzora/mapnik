@@ -146,11 +146,6 @@ struct geometry : geometry_base<T>
 {
     using coord_type = T;
 
-#if __cpp_inheriting_constructors >= 200802
-
-    using geometry_base<T>::geometry_base;
-
-#else
 
     geometry() = default;
 
@@ -158,7 +153,6 @@ struct geometry : geometry_base<T>
     geometry(G && geom)
         : geometry_base<T>(std::forward<G>(geom)) {}
 
-#endif
 };
 
 template <typename T>

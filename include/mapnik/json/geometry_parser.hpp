@@ -30,7 +30,7 @@
 
 namespace mapnik { namespace json {
 
-bool from_geojson(std::string const& json, mapnik::geometry::geometry<double> & geom);
+MAPNIK_DECL bool from_geojson(std::string const& json, mapnik::geometry::geometry<double> & geom);
 
 }}
 
